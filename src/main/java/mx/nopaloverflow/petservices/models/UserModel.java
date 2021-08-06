@@ -11,13 +11,6 @@ public class UserModel extends BaseModel {
     private String username;
     private String name;
     private String password;
-    /**
-     * In case of being part of a company, this is the company
-     * that the person is working in.
-     * To avoid conflicts of interest, it's better to keep them to
-     * work only in one company per user.
-     */
-    private PetCompanyModel company;
     private String userType;
 
     public String getName() {
@@ -44,14 +37,6 @@ public class UserModel extends BaseModel {
         this.password = password;
     }
 
-    public PetCompanyModel getCompany() {
-        return company;
-    }
-
-    public void setCompany(PetCompanyModel company) {
-        this.company = company;
-    }
-
     public String getUserType() {
         return userType;
     }
@@ -61,6 +46,6 @@ public class UserModel extends BaseModel {
     }
 
     public boolean isCompanyWorker() {
-        return this.company != null;
+        return false;
     }
 }

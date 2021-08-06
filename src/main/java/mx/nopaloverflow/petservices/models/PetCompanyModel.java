@@ -1,5 +1,6 @@
 package mx.nopaloverflow.petservices.models;
 
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
@@ -7,6 +8,7 @@ import java.util.Set;
 
 @Document("petcompanies")
 public class PetCompanyModel extends BaseModel {
+    @Indexed(unique = true)
     private String uid;
     private String name;
     private String description;
