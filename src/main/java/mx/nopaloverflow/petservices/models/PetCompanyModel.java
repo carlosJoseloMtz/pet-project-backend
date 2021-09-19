@@ -1,5 +1,6 @@
 package mx.nopaloverflow.petservices.models;
 
+import com.mongodb.lang.Nullable;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,6 +13,7 @@ public class PetCompanyModel extends BaseModel {
     private String uid;
     private String name;
     private String description;
+    @Nullable
     private Set<AddressModel> locations;
 
     public String getUid() {

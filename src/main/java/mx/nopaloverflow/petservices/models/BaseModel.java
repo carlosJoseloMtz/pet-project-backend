@@ -30,6 +30,11 @@ public class BaseModel {
 
     @Override
     public int hashCode() {
+        // object has not been saved/bound to the database
+        if (this.id == null) {
+            return super.hashCode();
+        }
+
         return this.id.hashCode();
     }
 

@@ -1,5 +1,6 @@
 package mx.nopaloverflow.petservices.models;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("companyusers")
@@ -11,6 +12,7 @@ public class CompanyUserModel extends UserModel {
      * To avoid conflicts of interest, it's better to keep them to
      * work only in one company per user.
      */
+    @DBRef
     private PetCompanyModel company;
 
     public PetCompanyModel getCompany() {

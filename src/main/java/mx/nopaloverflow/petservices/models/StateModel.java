@@ -1,6 +1,7 @@
 package mx.nopaloverflow.petservices.models;
 
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -9,6 +10,7 @@ public class StateModel extends BaseModel {
     @Indexed(unique = true)
     private String code;
     private String name;
+    @DBRef
     private CountryModel country;
 
     public String getCode() {

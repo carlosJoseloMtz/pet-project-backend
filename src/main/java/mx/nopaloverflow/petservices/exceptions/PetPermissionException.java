@@ -1,6 +1,6 @@
 package mx.nopaloverflow.petservices.exceptions;
 
-public class PetPermissionException extends Exception {
+public class PetPermissionException extends RuntimeException {
     public PetPermissionException() {
         super("The user used for this operation does not have enough privileges");
     }

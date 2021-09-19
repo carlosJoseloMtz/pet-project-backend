@@ -1,6 +1,6 @@
 package mx.nopaloverflow.petservices.facades.adoption;
 
-import mx.nopaloverflow.petservices.dtos.PetAdoptionRequest;
+import mx.nopaloverflow.petservices.api.requests.PetAdoptionRequest;
 
 public interface PetAdoptionFacade {
 

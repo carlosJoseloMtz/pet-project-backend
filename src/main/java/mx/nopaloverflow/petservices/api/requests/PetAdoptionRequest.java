@@ -1,4 +1,4 @@
-package mx.nopaloverflow.petservices.dtos;
+package mx.nopaloverflow.petservices.api.requests;
 
 public class PetAdoptionRequest {
     private String petId;
